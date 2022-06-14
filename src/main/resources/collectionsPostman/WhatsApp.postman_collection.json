@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "a4bece8d-1620-4fd8-9167-ad88a7ed159b",
+		"name": "WhatsApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13330270"
+	},
+	"item": [
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "New Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mariana\",\r\n    \"lastName\": \"Soares\",\r\n    \"alias\": \"Mariana_Soares\",\r\n    \"cellPhoneNumber\": \"2392519656\",\r\n    \"phoneNumber\": \"11111\",\r\n    \"address\": \"Francia 240\",\r\n    \"city\": \"Salliquelo\",\r\n    \"country\": \"Buenos Aires\",\r\n    \"createdBy\": \"admin\",\r\n    \"createdAt\": \"2022-06-14\",\r\n    \"updatedBy\": \"admin\",\r\n    \"updatedAt\": \"2022-06-14\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/contacts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/contacts/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"contacts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact By Alias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/contacts/byAlias?alias=Mariana_Soares",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"contacts",
+								"byAlias"
+							],
+							"query": [
+								{
+									"key": "alias",
+									"value": "Mariana_Soares"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact By Cell Phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/contacts/byCellPhone?cellphone_number=23925196567",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"contacts",
+								"byCellPhone"
+							],
+							"query": [
+								{
+									"key": "cellphone_number",
+									"value": "23925196567"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/contacts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "New Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PruebaApp\",\r\n    \"createdBy\": \"admin\",\r\n    \"createdAt\": \"2022-06-14\",\r\n    \"updatedBy\": \"admin\",\r\n    \"updatedAt\": \"2022-06-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/groups",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Contact",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/groups/addContact?group_id=1&contact_id=19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"groups",
+								"addContact"
+							],
+							"query": [
+								{
+									"key": "group_id",
+									"value": "1"
+								},
+								{
+									"key": "contact_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PruebaApp\",\r\n    \"createdBy\": \"admin\",\r\n    \"createdAt\": \"2022-06-14\",\r\n    \"updatedBy\": \"admin\",\r\n    \"updatedAt\": \"2022-06-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/groups/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Send Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact\": {\"id\":1},\r\n    \"message\": \"Este es un nuevo mensaje para el grupo 1 de whatsApp\",\r\n    \"group\": {\"id\":1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/send",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message By Contact And Group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact\": {\"id\":1},\r\n    \"message\": \"Este es un nuevo mensaje para el grupo 1 de whatsApp\",\r\n    \"group\": {\"id\":1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/byContactAndGroup/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"byContactAndGroup",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message By Group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact\": {\"id\":1},\r\n    \"message\": \"Este es un nuevo mensaje para el grupo 1 de whatsApp\",\r\n    \"group\": {\"id\":1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/byGroup/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"byGroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/byGroup/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"byGroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark read",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/messages/markRead/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"messages",
+								"markRead",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "Get Notification By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/notifications/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"notifications",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification By Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/notifications/byGroup/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"notifications",
+								"byGroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/notifications/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"notifications",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/notifications/byGroup/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"notifications",
+								"byGroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark read",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/api/v1/whatsapp/notifications/markRead/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp",
+								"notifications",
+								"markRead",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

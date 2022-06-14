@@ -1,0 +1,17 @@
+server:
+  port: 8090
+  servlet:
+    contextPath: /api/v1/whatsapp
+
+# Hibernate ddl auto (none, create, create-drop, validate, update)
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    url: jdbc:mysql://localhost:3306/whatsapp
+    username: whatsapp
+    password: 1945@whats_app#1950
